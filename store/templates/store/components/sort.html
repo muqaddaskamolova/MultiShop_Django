@@ -1,0 +1,14 @@
+{% load store_tags %}
+{% get_sorted as data %}
+{% for key in data %}
+<div class="nav-item dropdown pt-2 pt-lx-0">
+    <button class="nav-link products_filter_dropdown dropdown-toggle mr-3 border-0 text-dark" type="button" id="dropdown" data-toggle="dropdown" aria-expanded="false" style="border-radius:5px;">{{ key.title }}</button>
+
+   <ul class="dropdown-menu" aria-labelledby="dropdownColor">
+  {% for sorter in key.sorters %}
+       <li><a href="?sort={{ sorter.0 }}" class="dropdown-item bg-primary rounded-0 border-0 m-0">{{ sorter.1 }}</a></li>
+       {% endfor %}
+   </ul>
+</div>
+{% endfor %}
+

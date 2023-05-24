@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %}
+ {{ title }}
+{% endblock title %}
+{% block main %}
+ <!-- Carousel Start -->
+  {% include 'store/components/_carousel.html' %}
+    <!-- Carousel End -->
+
+
+    <!-- Featured Start -->
+  {% include 'store/components/_shipping.html' %}
+    <!-- Featured End -->
+
+
+  {% include 'store/components/_categories.html' %}
+    <!-- Categories End -->
+
+
+    <!-- Products Start -->
+
+    {% include 'store/components/_products.html' %}
+
+    <!-- Products End -->
+
+
+    <!-- Offer Start -->
+   {% include 'store/components/offer.html' %}
+    <!-- Offer End -->
+
+
+    <!-- Recent products Start -->
+   {% include 'store/components/_recent_products.html' %}
+    <!-- Recent products End -->
+
+
+
+    <!-- Vendor Start -->
+   {% include 'store/components/_vendor.html' %}
+    <!-- Vendor End -->
+
+
+{% endblock main %}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load i18n %}
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %} {% endblock title %}</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    {% include 'components/_styles.html' %}
+
+
+</head>
+
+<body>
+<header>
+    <!-- Topbar Start -->
+    {% include 'components/_topbar.html' %}
+ <!-- Topbar End -->
+    <!-- Navbar Start -->
+
+   {% include 'components/_nav.html' %}
+
+    <!-- Navbar End -->
+</header>
+<main>
+ {% block main %}
+
+    {% endblock main %}
+</main>
+    <!-- Footer Start -->
+    {% include 'components/_footer.html' %}
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+ {% include 'components/_scripts.html' %}
+</body>
+
+</html>

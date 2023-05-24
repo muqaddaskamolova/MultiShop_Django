@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+{% block main %}
+<div class="container">
+    <div class="content">
+        <h2>The payment was made successfully!</h2>
+        <p>You may proceed to buy</p>
+        <a href="{% url 'store:product_list' %}" class="btn btn-success">Back to Home</a>
+    </div>
+</div>
+{% endblock main %}
