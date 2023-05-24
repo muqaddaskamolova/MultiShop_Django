@@ -1,0 +1,1 @@
+# MultiShop_Django
